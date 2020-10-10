@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd backend && nodemon server",
+    "start": "cd backend && node server.js",
     "heroku-postbuild": "cd frontend && cd buyerapp && npm install && npm run build"
   },
   "keywords": [],
