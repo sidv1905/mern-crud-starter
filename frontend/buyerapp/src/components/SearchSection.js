@@ -17,7 +17,7 @@ class SearchSection extends React.Component {
     if (typeof this.props.match.params.buyername !== "undefined") {
       axios
         .get(
-          `http://localhost:3001/products/${this.props.match.params.buyername}`
+          `https://mern-starter-crud.herokuapp.com/products/${this.props.match.params.buyername}`
         )
         .then((res) => {
           this.setState({
@@ -25,7 +25,7 @@ class SearchSection extends React.Component {
           });
         });
     } else {
-      axios.get(`http://localhost:3001/products`).then((res) => {
+      axios.get(`https://mern-starter-crud.herokuapp.com/products`).then((res) => {
         this.setState({
           products: res.data,
         });
@@ -45,7 +45,7 @@ class SearchSection extends React.Component {
     if (typeof this.props.match.params.buyername !== "undefined") {
       axios
         .get(
-          `http://localhost:3001/products/${this.props.match.params.buyername}?product_name=${this.state.product_name}&lead_time=${this.state.lead_time}&weight_gsm=${this.state.weight_gsm}&quantity=${this.state.quantity}`
+          `https://mern-starter-crud.herokuapp.com/products/${this.props.match.params.buyername}?product_name=${this.state.product_name}&lead_time=${this.state.lead_time}&weight_gsm=${this.state.weight_gsm}&quantity=${this.state.quantity}`
         )
         .then((res) => {
           console.log(res.data);
@@ -56,7 +56,7 @@ class SearchSection extends React.Component {
     } else {
       axios
         .get(
-          `http://localhost:3001/products?product_name=${this.state.product_name}&lead_time=${this.state.lead_time}&weight_gsm=${this.state.weight_gsm}&quantity=${this.state.quantity}`
+          `https://mern-starter-crud.herokuapp.com/products?product_name=${this.state.product_name}&lead_time=${this.state.lead_time}&weight_gsm=${this.state.weight_gsm}&quantity=${this.state.quantity}`
         )
         .then((res) => {
           console.log(res.data);
